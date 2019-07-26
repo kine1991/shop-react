@@ -6,6 +6,7 @@ import './App.scss';
 
 const Home = () => (<div>Home</div>)
 const About = () => (<div>About</div>)
+const SignIn = () => (<div>SignIn</div>)
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/about" component={About}/>
+          <Route exact path="/singin" render={() => true ? <Redirect to="/"/> : <SignIn/>}/>
         </Switch>
       </div>
     )
