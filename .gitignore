@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 src/firebase/firebase.js
-src/data-json
+src/data-json/data-json.js
 /.pnp
 .pnp.js
 
