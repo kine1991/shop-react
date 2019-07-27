@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Header from './components/header/header.component'
+import ShopPage from './pages/shop/shop.component'
 import './App.scss';
 
 const Home = () => (<div>Home</div>)
-const About = () => (<div>About</div>)
 const SignIn = () => (<div>SignIn</div>)
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
         <Header/>
         <Switch>
           <Route exact path="/" component={Home}/>
-          <Route exact path="/about" component={About}/>
+          <Route exact path="/shop" component={ShopPage}/>
           <Route exact path="/singin" render={() => true ? <Redirect to="/"/> : <SignIn/>}/>
         </Switch>
       </div>

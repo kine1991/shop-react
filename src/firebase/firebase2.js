@@ -1,0 +1,1 @@
+// Add your firebase config, and change name firebase1.js => firebase
