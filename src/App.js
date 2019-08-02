@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
 import Header from './components/header/header.component'
+import HomePage from './pages/homepage/homepage.component'
 import CheckoutPage from './pages/checkout/checkout.component'
 import ShopPage from './pages/shop/shop.component'
 import LoginAndRegister from './pages/login-and-register/login-and-register.components'
@@ -12,7 +13,6 @@ import { setCurrentUser } from './redux/user/user.actions'
 import { selectCurrentUser } from './redux/user/user.selectors'
 import './App.scss';
 
-const Home = () => (<div>Home</div>)
 
 
 class App extends Component {
@@ -44,7 +44,7 @@ class App extends Component {
       <div className="app">
         <Header />
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={HomePage} />
           <Route exact path="/checkout" component={CheckoutPage} />
           <Route exact path="/shop" component={ShopPage} />
           {/* <LoginAndRegister/> */}
