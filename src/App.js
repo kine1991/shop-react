@@ -46,8 +46,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/checkout" component={CheckoutPage} />
-          <Route exact path="/shop" component={ShopPage} />
-          {/* <LoginAndRegister/> */}
+          <Route path="/shop" component={ShopPage} />
           <Route
             exact
             path="/login-register"
@@ -66,9 +65,6 @@ class App extends Component {
   }
 }
 
-// const mapStateToProps = (state) => ({
-//   currentUser: state.user.currentUser
-// })
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
 })
