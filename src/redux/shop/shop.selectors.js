@@ -9,12 +9,19 @@ export const selectCollections = createSelector(
     }
 )
 
+export const selectCollectionsForPreview = createSelector(
+    [selectCollections], 
+    collections => {
+        return Object.keys(collections).map(key => {
+            return collections[key]
+        })
+    }
+)
+
 export const selectCollection = params => createSelector(
     [selectCollections],
     collections => {
-        return collections.find(collection => {
-            return collection.title.toLowerCase() === params
-        })
+        return collections[params]
     }
 )
 
