@@ -25,3 +25,16 @@ export const selectCollection = params => createSelector(
     }
 )
 
+
+export const selectIsCollectionsFetching = createSelector(
+    [selectShop],
+    shop => {
+        return shop.isFetching
+    }
+)
+
+
+export const selectIsCollectionsLoaded = createSelector(
+    [selectShop],
+    shop => !!shop.collections
+  );
