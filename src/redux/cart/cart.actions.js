@@ -18,4 +18,8 @@ export const hiddenDropdown = () => ({
 })
 
 
+export const clearCart = () => ({
+    type: cartTypes.CLEAR_CART
+})
+
 
